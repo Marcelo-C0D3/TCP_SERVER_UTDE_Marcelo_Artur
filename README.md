@@ -21,6 +21,9 @@ O aplicativo cria um socket TCP com o número de porta especificado e aguarda um
 ```
 idf.py menuconfig
 ```
+####Após rodar o comando a seguinte tela deve aparecer:
+
+![menuconfig](https://user-images.githubusercontent.com/56330822/99081292-5884e980-25a1-11eb-9a85-5e683d7ec984.PNG)
 
 ### Build and Flash
 
