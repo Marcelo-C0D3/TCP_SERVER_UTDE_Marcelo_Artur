@@ -6,50 +6,25 @@ O aplicativo cria um socket TCP com o número de porta especificado e aguarda um
 
 ## Como usar o Aplicativo
 
-In order to create TCP client that communicates with TCP server example, choose one of the following options.
 
-There are many host-side tools which can be used to interact with the UDP/TCP server/client. 
-One command line tool is [netcat](http://netcat.sourceforge.net) which can send and receive many kinds of packets. 
-Note: please replace `192.168.0.167 3333` with desired IPV4/IPV6 address (displayed in monitor console) and port number in the following command.
-
-In addition to those tools, simple Python scripts can be found under sockets/scripts directory. Every script is designed to interact with one of the examples.
-
-### TCP client using netcat
-```
-nc 192.168.0.167 3333
-```
-
-### Python scripts
-Script tcpclient.py contains configuration for port number, IP version (IPv4 or IPv6) and IP address that has to be altered to match the values used by the application. Example:
+### Requisitos de Hardware
 
 ```
-PORT = 3333;
-IP_VERSION = 'IPv4'
-IPV4 = '192.168.0.167'
-IPV6 = 'FE80::32AE:A4FF:FE80:5288'
+* Este exemplo pode ser executado em qualquer placa de desenvolvimento ESP32 comumente disponível.
+* Necessario sensor DHT11(Defina os pinos no cabeçario do projeto/main.c)Default(GPIO_NUM_0).
+* Necessario sensor HC-SR04(Defina os pinos no cabeçario do projeto/main.c)Default(GPIO_NUM_2/GPIO_NUM_13).
+* Necessario LED(Defina os pinos no cabeçario do projeto/main.c) Default(`GPIO_NUM_14`).
 ```
 
-## Hardware Required
-
-This example can be run on any commonly available ESP32 development board.
-
-## Configure the project
+### Configure o Projeto
 
 ```
 idf.py menuconfig
 ```
 
-Set following parameters under Example Configuration Options:
+### Build and Flash
 
-* Set `IP version` of the example to be IPV4 or IPV6.
-
-* Set `Port` number of the socket, that server example will create.
-
-Configure Wi-Fi or Ethernet under "Example Connection Configuration" menu. See "Establishing Wi-Fi or Ethernet Connection" section in [examples/protocols/README.md](../../README.md) for more details.
-
-## Build and Flash
-
-Build the project and flash it to the board, then run monitor tool to view serial output:
+Construa o projeto e envie-o para a placa, em seguida, execute a ferramenta de monitoramento para visualizar a saída serial:
 
 ```
 idf.py -p PORT flash monitor
@@ -60,6 +35,6 @@ idf.py -p PORT flash monitor
 See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
 
 
-## Troubleshooting
+### Aplication
 
-Start server first, to receive data sent from the client (application).
+Inicie primeiro o servidor para receber os dados solicitados pelo cliente (aplicativo).

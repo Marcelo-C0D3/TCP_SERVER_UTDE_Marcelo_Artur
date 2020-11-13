@@ -41,12 +41,11 @@
 #define DEBUG TRUE
 #define LED_BIT BIT0
 
-#define LED_B GPIO_NUM_14
-#define BUTTON GPIO_NUM_16
+#define LED_B GPIO_NUM_14 //led pin
 #define MAX_DISTANCE_CM 100 // 5m max
-#define TRIGGER_GPIO GPIO_NUM_2
-#define ECHO_GPIO GPIO_NUM_13
-#define DHT_GPIO GPIO_NUM_0
+#define TRIGGER_GPIO GPIO_NUM_2 //ultrasonic HC-SR04 pin
+#define ECHO_GPIO GPIO_NUM_13   //ultrasonic HC-SR04 pin
+#define DHT_GPIO GPIO_NUM_0     //dht11 pin
 #define PORT CONFIG_EXAMPLE_PORT
 
 /* Variáveis Globais */
