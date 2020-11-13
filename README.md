@@ -4,8 +4,14 @@
 
 O aplicativo cria um socket TCP com o número de porta especificado e aguarda uma solicitação de conexão do cliente. Depois de aceitar uma solicitação do cliente, a conexão entre o servidor e o cliente é estabelecida e o aplicativo aguarda que alguns dados sejam recebidos do cliente. Os dados recebidos são processados como texto ASCII e retorna a resposta ao cliente cuja oque foi solicitado.
 
-## Como usar o Aplicativo
+## Antes de começar
 
+### Verifique a versão do seu SDK.
+- [X] Algoritmo Desenvolvido com SDK Version ESP-IDF v4.1-dirty
+### Baixe o App completo.
+- [X] https://github.com/Marcelo-C0D3/TCP_SERVER_UTDE_Marcelo_Artur
+### Descompacte-o na pasta do seu SDK.
+- [X] Libs DHT e Ultrasonic. já incluidos e importados neste diretorio.
 
 ### Requisitos de Hardware
 
@@ -62,4 +68,23 @@ idf.py -p PORT flash monitor
 
 ### Estabelecer uma conxão Cliente/Servidor.
 
-Inicie primeiro o servidor para receber os dados solicitados pelo cliente (aplicativo).
+#### Neste exemplo eu uso o Realterm, para estabelecer uma conexão cliente/server.
+Lembrando inicie primeiro o servidor para receber os dados solicitados pelo cliente (aplicativo).
+
+### Após baixar e instalar o realterm em seu dispositivo, execute-o.
+### Vá até a Aba `Port`. Mostrada na iamgem.
+
+![realterm1](https://user-images.githubusercontent.com/56330822/99087159-355e3800-25a9-11eb-9d7c-0d2e6e77b8c4.PNG)
+
+### Na Aba Port. Prencha o campo `Port` com `IP:PORT` obtidos anteriormente. Apos isto Click! em Change para aplicar as configuraçoes.
+### Ao lado, em Status os seguintes campos devem aparecer como vizualizados na imagem.
+
+## Pronto! A conexão Cliente/Server foi estabelecia.
+
+### Agora voce pode enviar seus codigos ASCII ao servidor. E receber as informaçoes requisitadas.
+### Exemplo de codigo `TEMP` e `DIST` enviados. Mostrados na imagem.
+
+![req](https://user-images.githubusercontent.com/56330822/99088037-3cd21100-25aa-11eb-85b8-7390de8bc8fe.PNG)
+
+### Agora voce mesmo pode enviar os codigos: `TEMP`, `DIST`, `UMID`, `LEDB` e `HELP` para obter respostas do servidor.
+
