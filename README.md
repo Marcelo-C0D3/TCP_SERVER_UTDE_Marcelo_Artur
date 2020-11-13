@@ -18,6 +18,7 @@ O aplicativo cria um socket TCP com o número de porta especificado e aguarda um
 
 ### Configure o Projeto
 
+* Navegue até a pasta do projeto, com seu console do SDK (ESP-IDF Command Prompt) .
 ```
 idf.py menuconfig
 ```
@@ -30,20 +31,35 @@ idf.py menuconfig
 ![port](https://user-images.githubusercontent.com/56330822/99081795-190acd00-25a2-11eb-8f07-d66c372a836d.PNG)
 
 #### Configure a Porta `Port`, se quiser. Por padrão está executando a porta 3333.
+#### Retorne a tela anterior.
+
+#### Acesse `Example Connection Configuration` .
+
+![Redeconfig](https://user-images.githubusercontent.com/56330822/99082473-f4fbbb80-25a2-11eb-8547-e671b19ec0ef.PNG)
+
+#### Configure o Nome de sua rede `WiFi SSID`. Necessario para executar o servidor.
+#### Configure A Senha da sua rede `WiFi Password`. Necessario para executar o servidor.
+#### Desmarque a caixa `Obtain IPv6 link-local address`. Vem selecionada por padrão, e desnecessario para uso em redes IPv4.
+#### Apos os procedimentos. Salve as alteraçoes e Saia do menuconfig..
+
 
 ### Build and Flash
 
+Ainda na pasta do projeto, com seu console do SDK (ESP-IDF Command Prompt) 
 Construa o projeto e envie-o para a placa, em seguida, execute a ferramenta de monitoramento para visualizar a saída serial:
 
 ```
 idf.py -p PORT flash monitor
 ```
 
-(To exit the serial monitor, type ``Ctrl-]``.)
+#### Após rodar o comando a seguinte tela deve aparecer:
 
-See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
+![rodando](https://user-images.githubusercontent.com/56330822/99083292-190bcc80-25a4-11eb-8d32-2093400483a2.PNG)
 
+## Otimo! O servidor está no Ar.
 
-### Aplication
+#### Em vermelho na imagem, visualize o `IP` que o servidor obteve e em sequencia a `Porta` que definimos. Observe no seu console os dados atribuidos, e os guarde, que iremos utilizar em breve.
+
+### Estabelecer uma conxão Cliente/Servidor.
 
 Inicie primeiro o servidor para receber os dados solicitados pelo cliente (aplicativo).
