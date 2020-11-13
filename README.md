@@ -21,9 +21,15 @@ O aplicativo cria um socket TCP com o número de porta especificado e aguarda um
 ```
 idf.py menuconfig
 ```
-####Após rodar o comando a seguinte tela deve aparecer:
+#### Após rodar o comando a seguinte tela deve aparecer:
 
 ![menuconfig](https://user-images.githubusercontent.com/56330822/99081292-5884e980-25a1-11eb-9a85-5e683d7ec984.PNG)
+
+#### Acesse `Example Configuration` .
+
+![port](https://user-images.githubusercontent.com/56330822/99081795-190acd00-25a2-11eb-8f07-d66c372a836d.PNG)
+
+#### Configure a Porta `Port`, se quiser. Por padrão está executando a porta 3333.
 
 ### Build and Flash
 
