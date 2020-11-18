@@ -88,5 +88,7 @@ Lembrando inicie primeiro o servidor para receber os dados solicitados pelo clie
 
 ### Agora voce mesmo pode enviar os codigos: `TEMP`, `DIST`, `UMID`, `LEDB` e `HELP` para obter respostas do servidor.
 
-![Watch the video](https://drive.google.com/file/d/1FW2UvrYbyrKgUVBmfQuviJEhruBpIOhX/view?usp=sharing)
+## Hardware montado
+
+![circuito](https://drive.google.com/file/d/1FaY7fcNY-80CTmC3zc3vBf_wk1Vk6gFt/view?usp=sharing)
 
